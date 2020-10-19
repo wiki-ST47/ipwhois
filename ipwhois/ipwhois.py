@@ -68,7 +68,7 @@ class IPWhois:
                      extra_blacklist=None, ignore_referral_errors=False,
                      field_list=None, extra_org_map=None,
                      inc_nir=True, nir_field_list=None, asn_methods=None,
-                     get_asn_description=True):
+                     get_asn_description=True, get_recursive=True):
         """
         The function for retrieving and parsing whois information for an IP
         address via port 43 (WHOIS).
@@ -167,7 +167,7 @@ class IPWhois:
             inc_raw=inc_raw, retry_count=retry_count, response=None,
             get_referral=get_referral, extra_blacklist=extra_blacklist,
             ignore_referral_errors=ignore_referral_errors, asn_data=asn_data,
-            field_list=field_list
+            field_list=field_list, get_recursive=get_recursive,
         )
 
         # Add the WHOIS information to the return dictionary.
